@@ -1,0 +1,155 @@
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  font-weight: 500;
+  color: #646cff;
+  text-decoration: inherit;
+}
+a:hover {
+  color: #535bf2;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+.flex {
+  display: flex;
+}
+.flex > * {
+  flex-grow: 1;
+}
+.gap {
+  gap: 0.5em;
+}
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+}
+.pl1 {
+  padding-left: 0.5em;
+}
+
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #1a1a1a;
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+button:hover {
+  border-color: #646cff;
+}
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+.card {
+  padding: 2em;
+}
+
+#app {
+  max-width: 1280px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+  a:hover {
+    color: #747bff;
+  }
+  button {
+    background-color: #f9f9f9;
+  }
+}
+.CategoryListing,
+.CategoryEdit,
+.ProductList {
+  width: 100%;
+  border: 1px solid #337;
+  border-radius: 5px;
+  padding: 0.5em;
+  overflow: hidden;
+  margin-bottom: 1em;
+}
+.CategoryListing h2,
+.CategoryEdit h2,
+.ProductList h2 {
+  background: #4747af;
+  color: aliceblue;
+  padding: 0.6em 1em 0.2em;
+  margin: -0.7em;
+  margin-bottom: 0.5em;
+}
+
+.ProductList h2 {
+  background: #8e47af;
+}
+
+.CategoryListing h2 {
+  background: #e84694;
+}
+.CategoryEdit img {
+  width: 240px;
+  border: 1px solid #535bf200;
+}
+
+.CategoryEdit img:hover {
+  border: 1px solid #535bf2;
+}
+.CategoryEdit .PicturePlace {
+  height: 240px;
+  overflow: hidden;
+}
+.CategoryEdit form > div {
+  display: flex;
+  margin-bottom: 0.5em;
+}
+.CategoryEdit form > div label {
+  width: 20em;
+}
+.CategoryEdit form > div input,
+.CategoryEdit form > div select {
+  padding: 0.5em;
+}
+
+.CategoryListing {
+  width: 200px;
+  flex-grow: 0;
+}
+.CategoryListing a {
+  cursor: grab;
+}
+.CategoryListing a:hover {
+  text-decoration: underline;
+}
+.CategoryListing i {
+  text-align: right;
+  padding-right: 1em;
+}

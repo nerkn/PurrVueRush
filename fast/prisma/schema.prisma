@@ -1,0 +1,30 @@
+datasource db {
+  provider          = "mysql"
+  url               = env("DATABASE_URL")
+  shadowDatabaseUrl = env("SHADOW_DATABASE_URL")
+}
+generator client {
+  provider = "prisma-client-js"
+}
+
+model Category {
+  id         Int        @id @default(autoincrement())
+  name       String?
+  picture    String?
+  parent_id  Int?
+  parent     Category?  @relation("parent", fields: [parent_id], references: [id])
+  children   Category[] @relation("parent")
+  created_at DateTime
+  updated_at DateTime
+  Product    Product[]
+}
+
+model Product {
+  id          Int      @id @default(autoincrement())
+  name        String
+  picture     String?
+  category_id Int
+  category    Category @relation(fields: [category_id], references: [id])
+  created_at  DateTime
+  updated_at  DateTime
+}

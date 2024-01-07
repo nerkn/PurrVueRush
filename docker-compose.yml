@@ -1,0 +1,20 @@
+version: "3.4"
+services:
+  backend:
+    image: node:20
+    volumes:
+      - "./:/app"
+    working_dir: /app/fast
+    user: node
+    entrypoint: ["start.sh"]
+    ports:
+      - "3000:3000"
+  frontend:
+    image: node:20
+    volumes:
+      - "./:/app"
+    working_dir: /app/frontend
+    user: node
+    entrypoint: ["start.sh"]
+    ports:
+      - "80:3053"

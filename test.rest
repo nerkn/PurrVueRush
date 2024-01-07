@@ -1,0 +1,33 @@
+
+@host = http://localhost:3000
+
+
+GET {{host}}/categories 
+###
+GET {{host}}/categories/6 
+
+###
+GET {{host}}/categories/findSubCategories/6
+
+###
+POST {{host}}/categories HTTP/1.1
+content-type: application/json
+
+{
+    "name": "sample",
+    "parent_id":0,
+    "picture":""
+}
+
+###
+PUT {{host}}/categories/6 
+content-type: application/json
+
+{
+    "name": "sample updated",
+    "parent_id":2,
+    "picture":""
+}
+
+###
+GET {{host}}/categories/ProductCount
