@@ -11,7 +11,10 @@ const fastify = Fastify({
 });
 
 fastify.register(staticServe, {
-  root: new URL("./public", import.meta.url),
+  root: [
+    new URL("./public", import.meta.url),
+    new URL("../frontend/dist", import.meta.url),
+  ],
 });
 fastify.get("/", function (request, reply) {
   return reply.send({ hello: "world" });
