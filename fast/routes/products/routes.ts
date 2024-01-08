@@ -40,9 +40,10 @@ export function productsRoute(
     });
     return oldProduct;
   });
-  fastify.delete(base, async (request) => {
-    let { id } = ProductSchemas.id.parse(request.body);
-    prisma.product.delete({ where: { id } });
+  fastify.delete(base + "/:id", async (request) => {
+    let { id } = ProductSchemas.id.parse(request.params);
+    await prisma.product.delete({ where: { id } });
+    return JSON.stringify("ok");
   });
   done();
 }

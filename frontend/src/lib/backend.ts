@@ -46,8 +46,6 @@ export const backend = {
         body: JSON.stringify(data),
       }).then((r) => r.json()),
     delete: (id: number) =>
-      fetch(productBase + "/" + id, { method: "Delete", headers }).then((r) =>
-        r.json()
-      ),
+      fetch(productBase + "/" + id, { method: "Delete" }).then((r) => r.json()),
   },
 };

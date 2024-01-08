@@ -46,5 +46,13 @@ export const useCategoryStore = defineStore("categories", {
       this.$patch({ cats });
       this.status = "loaded";
     },
+    getParents(id: number): Category[] {
+      let me = this.cats.find((cat) => cat.id == id);
+      if (!id || !me) return [];
+      return [...this.getParents(me.parent_id), me];
+    },
+    getChildren(id: number): Category[] {
+      return this.cats.filter((cat) => cat.parent_id == id);
+    },
   },
 });
