@@ -68,7 +68,7 @@ async function deleteDialogResult() {
         <h2>Products of {{ category.name }} </h2>
         <div class="flex">
             <a v-for="product in products" @click="() => selectProduct(product.id)">{{ product.name }}</a>
-            <a @click="() => { productSelected = newProduct }">New Product</a>
+            <a @click="() => { productSelected = { ...newProduct } }">New Product</a>
         </div>
         <div v-if="productSelected" class="ProductEdit">
             <h3>{{ productSelected.name }}</h3>

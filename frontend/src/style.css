@@ -179,3 +179,10 @@ button:focus-visible {
   text-align: right;
   padding-right: 1em;
 }
+.PicturePlace {
+  max-width: 600px;
+}
+
+.PicturePlace img {
+  width: 100%;
+}
