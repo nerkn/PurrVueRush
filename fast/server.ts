@@ -17,7 +17,8 @@ fastify.register(staticServe, {
   ],
 });
 fastify.get("/", function (request, reply) {
-  return reply.send({ hello: "world" });
+  console.log("helo");
+  return reply.sendFile("index.html", "/app/frontend/dist");
 });
 fastify.decorate("prisma", prisma);
 fastify.register(categoriesRoute);

@@ -1,6 +1,9 @@
 # PurrVueRush
 
 Categorized product with image app.
+| | |
+|----|----|
+| ![PurrVueRush screenshot](https://raw.githubusercontent.com/nerkn/dos-donts/main/assets/vue-fastify.png) | ![PurrVueRush doggie screenshot](https://raw.githubusercontent.com/nerkn/dos-donts/main/assets/Doggie.png) |
 
 ## Description
 
@@ -10,7 +13,7 @@ PurrVueRush is a modern web application built using Fastify, Prisma, and Vue. It
 
 `Recursive Category System`: Easily organize your products with a hierarchical category structure that supports unlimited nesting. This allows for a logical and intuitive organization of your product catalog.
 
-`Product Management with Images`: Upload and display product images, giving your users a visual representation of the items. Manage product details, including descriptions, prices, and other relevant information.
+`Product Management with Images`: Upload and display product images, giving your users a visual representation of the items.Image resized and packed with webp in client side. Less work for server.
 
 `Fast and Efficient Backend with Fastify`: The backend is powered by Fastify, a high-performance web framework for Node.js. This ensures speedy responses and a smooth user experience.
 
@@ -45,13 +48,21 @@ PurrVueRush is a modern web application built using Fastify, Prisma, and Vue. It
    cd PurrVueRush
    ```
 
-2. **Run docker:**
+2. **Prepare Environment for MySql:**
+
+   ```bash
+   into /fast/.env
+   DATABASE_URL=
+   SHADOW_DATABASE_URL=
+   ```
+
+3. **Run docker:**
 
    ```bash
    docker-compose up
    ```
 
-3. **Access the PurrVueRush:**
+4. **Access the PurrVueRush:**
 
    Open your browser and visit [http://localhost](http://localhost) .
 
