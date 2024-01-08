@@ -141,6 +141,7 @@ button:focus-visible {
 .CategoryListing h2 {
   background: #e84694;
 }
+.ProductList img,
 .CategoryEdit img {
   width: 240px;
   border: 1px solid #535bf200;
@@ -149,6 +150,7 @@ button:focus-visible {
 .CategoryEdit img:hover {
   border: 1px solid #535bf2;
 }
+.ProductList .PicturePlace,
 .CategoryEdit .PicturePlace {
   height: 240px;
   overflow: hidden;
@@ -178,11 +180,4 @@ button:focus-visible {
 .CategoryListing i {
   text-align: right;
   padding-right: 1em;
-}
-.PicturePlace {
-  max-width: 600px;
-}
-
-.PicturePlace img {
-  width: 100%;
 }
