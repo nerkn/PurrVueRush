@@ -41,7 +41,7 @@ function updateImage(e: Event) {
 }
 async function fileUpload(id: number) {
     if (productImageElementRef.value) {
-        let result = await imgResizeUpload(productImageElementRef.value, "/api/fileupload/product/" + id, 200)
+        let result = await imgResizeUpload(productImageElementRef.value, "/api/fileupload/product/" + id, 3200)
         productSelected.value = { ...newProduct, ...productSelected.value, picture: result.picture }
     }
 
