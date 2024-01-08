@@ -3,6 +3,9 @@ npm install
 npm run build
 cd ../fast
 npm install
-npm run migrate:dev
+echo "migrating"
+npm run migrate:deploy
+echo "prisma client generation"
 npx prisma generate 
+echo "starting app"
 npm run start
